@@ -17,4 +17,5 @@ Not very detailed. Made for my reference. May delete later.
 - import type{Request, Response} from "express"
 - (req: Request, res: Response)
 - imports use js instead of ts
+- import * as jwt from "jsonwebtoken"
 
