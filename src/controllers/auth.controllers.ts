@@ -2,7 +2,7 @@ import User from "../models/user.model.js";
 import dotenv from "dotenv";
 import type { Request, Response } from "express";
 import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
+import * as jwt from "jsonwebtoken";
 
 dotenv.config();
 
@@ -89,7 +89,7 @@ export async function loginUser(req: Request, res: Response) {
     })
 }
 
-export async function logoutUser(req: Request, res: Response) {
+export async function logoutUser(_: Request, res: Response) {
     res.clearCookie("AuthCookie");
     return res.status(200).json({
         status: 200,

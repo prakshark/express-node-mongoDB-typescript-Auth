@@ -17,4 +17,3 @@ connectDB()
         console.log(`Server listening at port ${PORT}`);
     });
 });
-//# sourceMappingURL=index.js.map

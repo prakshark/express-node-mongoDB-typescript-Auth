@@ -1,7 +1,7 @@
 import User from "../models/user.model.js";
 import dotenv from "dotenv";
 import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
+import * as jwt from "jsonwebtoken";
 dotenv.config();
 export async function registeruser(req, res) {
     const { username, password } = req.body;
@@ -78,7 +78,7 @@ export async function loginUser(req, res) {
         toekn: token
     });
 }
-export async function logoutUser(req, res) {
+export async function logoutUser(_, res) {
     res.clearCookie("AuthCookie");
     return res.status(200).json({
         status: 200,
@@ -92,4 +92,3 @@ export async function getProfile(req, res) {
         data: user
     });
 }
-//# sourceMappingURL=auth.controllers.js.map

@@ -1,4 +1,4 @@
-import jwt from "jsonwebtoken";
+import * as jwt from "jsonwebtoken";
 import dotenv from "dotenv";
 dotenv.config();
 export async function protectRoute(req, res, next) {
@@ -20,4 +20,3 @@ export async function protectRoute(req, res, next) {
     req.user = decoded;
     next();
 }
-//# sourceMappingURL=auth.middleware.js.map

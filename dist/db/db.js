@@ -10,4 +10,3 @@ export async function connectDB() {
     await mongoose.connect(uri);
     console.log(`Connected to MongoDB`);
 }
-//# sourceMappingURL=db.js.map

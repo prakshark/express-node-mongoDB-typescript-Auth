@@ -7,4 +7,3 @@ router.post("/login", loginUser);
 router.post("/logout", logoutUser);
 router.post("/profile", protectRoute, getProfile);
 export default router;
-//# sourceMappingURL=auth.routes.js.map
